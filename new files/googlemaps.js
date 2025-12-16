@@ -296,7 +296,7 @@ function resetMarkersInfoW () {
 }
    async function calcAirQuality (point) {
     
-      const url =  `https://airquality.googleapis.com/v1/currentConditions:lookup?key=AIzaSyBn3w3bIV_shdMULol4MbrFpGClcskM31M`;
+      const url =  `https://HIDDEN FOR SECURITY REASONS`;
       
         var latlngPoint = point.latlng;
         if(typeof(latlngPoint.lat) =='function'){
