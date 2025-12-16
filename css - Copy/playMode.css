@@ -1,0 +1,772 @@
+/*
+    This file is part of "ChoiCo" a web application for designing digital games, written by Marianthi Grizioti for the National and Kapodistrian University of Athens (Educational Technology Lab).
+    Copyright (C) 2017-2018.
+    ChoiCo is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    ChoiCo is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+*/
+body {
+    margin: 0;
+    padding: 0;
+	font-size: 80%;
+  font-family: sans-serif;
+  width: 100%;
+  height: 100%;
+  background: #dff2d8;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;               /* width of the entire scrollbar */
+}
+
+
+body::-webkit-scrollbar-thumb {
+  background-color: black;    /* color of the scroll thumb */
+  border-radius: 30px;       /* roundness of the scroll thumb */
+}
+
+#mainContainer {
+  margin:0;
+	width: 100%;
+	height: 100%;
+}
+
+.header {
+  height: auto;
+  width: 100%;
+  background: beige;
+}
+.footer {
+  margin-top: 30px;
+font-size: 10px;
+font-family:sans-serif;
+width: 30%;
+
+}
+
+.logo {
+  width: 40%;
+}
+#gameBoard{
+  overflow: scroll;
+}
+#playBoard {
+
+width:100%;
+height: 100%;
+background: #a4b357; /* Old browsers */
+background: -moz-linear-gradient(top,  #a4b357 0%, #75890c 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #a4b357 0%,#75890c 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #a4b357 0%,#75890c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a4b357', endColorstr='#75890c',GradientType=0 ); /* IE6-9 */
+-webkit-box-shadow: 7px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 7px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 7px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.introText{
+  font-weight: bold;
+  color: #333;
+  letter-spacing: 0pt;
+  word-spacing: 2pt;
+  font-size: 5vh;
+  font-family: verdana, sans-serif;
+  line-height: 2;
+  margin-top: 2%;
+
+}
+
+.intro-button {
+  cursor: pointer;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 3vh;
+  background-color: #7ebdc3;
+  height: 100px;
+  width: 300px;
+  margin-top: 10px;
+  display:inline-grid;
+  text-align: center;
+
+}
+
+.intro-button:hover, .intro-button:focus {
+  background-color: #7ebdc3;
+}
+.main-area {
+  margin-top: 50px;
+  background: #dff2d8;
+}
+.menu-area {
+  background: #9dc4b5;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.intro-area {
+  margin-top: 50px;
+  background: #dff2d8;
+/*height: 500px;*/
+}
+#designMode {
+margin-left: 35%;
+}
+
+.gameRow {
+z-index:450;
+}
+.introButton:hover {
+  background: #3df285;
+  background-image: -webkit-linear-gradient(top, #3df285, #4b8717);
+  background-image: -moz-linear-gradient(top, #3df285, #4b8717);
+  background-image: -ms-linear-gradient(top, #3df285, #4b8717);
+  background-image: -o-linear-gradient(top, #3df285, #4b8717);
+  background-image: linear-gradient(to bottom, #3df285, #4b8717);
+  text-decoration: none;
+}
+
+.introSubText {
+
+text-shadow:0px -1px 4px rgba(125,129,133,0.8);
+font-weight:normal;font-style:italic;color:#000000;letter-spacing:0pt;
+word-spacing:2pt;font-size:3vh;text-align:left;
+font-family:verdana, sans-serif;line-height:2;
+text-align: center;
+
+}
+.choico {
+  text-shadow:0px -1px 4px rgba(96,191,96,0.8);
+  font-weight:bold;color:#11700A;letter-spacing:0pt;
+  word-spacing:2pt;font-size:8vh;text-align:left;
+  font-family:verdana, sans-serif;
+  line-height:2;
+  margin-left: 30%;
+
+}
+#mapPlay {
+
+/*margin-left: 200px;*/
+height:500px;
+width: 700px;
+z-index:450;
+border: 1px solid black;
+
+}
+
+
+#valuesText {
+  padding: 5px;
+}
+#static_infos {
+margin-left: 2px;
+margin-top: 2px;
+width: 100px;
+float:left;
+}
+
+#static_infos input {
+  width: 30px;
+  height: 30px;
+  min-width: 8px;
+  min-height: 8px;
+}
+#gameTitleDiv {
+margin-left: 3%;
+font-weight: bold;
+font-size: initial;
+display: none;
+}
+.selectButton {
+	background-color:#ffab23;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #ffab23;
+	display:inline-block;
+	cursor:pointer;
+	color:#333333;
+	font-family:Arial;
+	font-size:1em;
+	font-weight:bold;
+	padding:5px 5px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+  width: 100%;
+  /* margin-left: 89%;
+  margin-top: 2%;*/
+}
+.selectButton:hover {
+
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+.selectButton:active {
+	position:relative;
+	top:1px;
+}
+.selectButton:disabled {
+  cursor: not-allowed;
+}
+
+#playButtons {
+	position: absolute;
+	top: 90%;
+	left: 10%;
+}
+/* The Modals (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 500; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+}
+
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+.modal_button {
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+background-color: #4CAF50;
+}
+.modal_button:hover {background-color: #46a049;}
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/*
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+  text-align: center;
+}
+
+
+.modal-body {padding: 2px 16px;
+  min-height: 100px;
+  text-align: center;
+  font-size: 18px;
+  max-height: 350px;
+  overflow-y: scroll;
+}
+
+
+.modal hr {
+  border: 4px solid green;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+}*/
+.green {
+    background-color: #5cb85c;
+    text-align: center;
+    padding:4px;
+}
+.orange {
+    background-color: orange;
+    text-align: center;
+    padding:4px;
+}
+.buttonOrange {
+  background-color: rgba(235,129,0,1);
+}
+.buttonOrange:hover {
+    background-color:rgb(248, 190, 120);
+}
+/* Specific modal elements */
+.modal-score {
+  font-size: 18px;
+    padding: 8px;
+  border: 5px solid lightgreen;
+}
+.modal-textarea {
+width: 100%;
+  background-color: beige;
+height:40vh;
+overflow-y: auto;
+}
+.modal-textarea hr {
+border: 1px solid grey;
+ }
+
+
+
+.playModeIntro {
+	margin-left: 20px;
+  margin-top: 20px;
+	width: 100%;
+	font-family: Tahoma;
+	size: 15px;
+}
+.playModeIntro ul {
+
+    list-style-image: url('../media/imgs/pin.png');
+
+}
+.playModeIntro li {
+	padding: 10px;
+
+}
+.playModeIntro li:hover {
+	 color: blue;
+	 text-decoration: underline;
+	 cursor: pointer;
+
+}
+#examples {
+  width: 60%;
+margin-left: 25%;
+
+}
+#examplesTable tr {
+color:#5c5d8d ;
+cursor: pointer;
+font-size: 2vh;
+}
+
+#examplesTable {
+border-collapse: collapse;
+display: none;
+
+}
+#examplesTable tbody {
+  display: block;
+  overflow-y:  scroll;
+  height: 500px;
+  border-bottom: 1px solid black;
+}
+#examplesTable th,td {
+    border-bottom: 1px solid grey;
+}
+
+#examplesTable img{
+    width: 60px;
+    height:60px;
+}
+
+#myTab {
+  font-family: verdana;
+  font-size: 0.9rem;
+}
+
+.bannerText{
+margin-bottom: auto;
+  font-size: 3.0vh;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  color: #006636;
+  font-weight: bold;
+}
+.inputfile {
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+ cursor: pointer;
+}
+.inputfile_label {
+  cursor: pointer;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 3vh;
+  background-color: #7EBDC3;
+  height: 100px;
+  width: 300px;
+  margin-top: 10px;
+  display: block;
+}
+
+.playModeIntro p {
+ font-weight: bold;
+}
+.rightSide {
+  margin-right: 2px;
+  margin-left: 15px;
+  margin-top : 10px;
+}
+#pointInfo{
+   text-align: left;
+  background: rgba(255,159,41,1);
+background: -moz-linear-gradient(top, rgba(255,159,41,1) 0%, rgba(235,129,0,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,159,41,1)), color-stop(100%, rgba(235,129,0,1)));
+background: -webkit-linear-gradient(top, rgba(255,159,41,1) 0%, rgba(235,129,0,1) 100%);
+background: -o-linear-gradient(top, rgba(255,159,41,1) 0%, rgba(235,129,0,1) 100%);
+background: -ms-linear-gradient(top, rgba(255,159,41,1) 0%, rgba(235,129,0,1) 100%);
+background: linear-gradient(to bottom, rgba(255,159,41,1) 0%, rgba(235,129,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9f29', endColorstr='#eb8100', GradientType=0 );
+background-color:#ffab23;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:3px;
+border:1px solid #ffab23;
+color:#333333;
+font-family:Arial;
+font-size:1em;
+font-weight:bold;
+padding:5px 5px;
+text-decoration:none;
+text-shadow:0px 1px 0px #ffee66;
+  font-size:15px;
+  font-weight:oblique;
+  color:black;
+  text-align:center;
+  font-style: bold;
+  width:96%;
+  float: left;
+
+	-moz-border-radius-bottomleft:2px;
+	-webkit-border-bottom-left-radius:2px;
+	border-bottom-left-radius:2px;
+	-moz-border-radius-bottomright:2px;
+	-webkit-border-bottom-right-radius:2px;
+	border-bottom-right-radius:2px;
+	-moz-border-radius-topright:2px;
+	-webkit-border-top-right-radius:2px;
+	border-top-right-radius:2px;
+	-moz-border-radius-topleft:2px;
+	-webkit-border-top-left-radius:2px;
+	border-top-left-radius:2px;
+}
+#pointImage {
+	display: none;
+	width: 80%;
+	height: 25%;
+	border: 1px black solid;
+
+}
+.leftSideBottom {
+	position: absolute;
+	left:58%;
+	top: 51%;
+	width: 58%;
+	height: 50%;
+
+}
+
+.progress {
+	min-height:100px;
+}
+.scoreDiv {
+
+  margin-left: 5%;
+}
+#score {
+    width: auto;
+    font-family: sans-serif;
+      font-size: 16px;
+      float: left;
+      margin-left: 5px;
+      background-color: #ed8505;
+      color: white;
+      font-weight: bold;
+      border-bottom: 2px solid gray;
+      border-left: 2px solid gray;
+          border-top: 2px solid grey;
+
+}
+
+#overallTable{
+  font-family: sans-serif;
+  text-align: left;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+    overflow-y: hidden;
+  white-space: nowrap;
+  max-width: 900px;
+  height: 100%;
+}
+#overallTable  td  {
+  padding: 5px;
+  border-bottom: 2px solid grey;
+    border-top: 2px solid grey;
+}
+
+#overallTable tr:first-child{
+  font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background: #0F3C59;
+background: -moz-linear-gradient(top, #4b6d82 0%, #274f69 66%, #0F3C59 100%);
+background: -webkit-linear-gradient(top, #4b6d82 0%, #274f69 66%, #0F3C59 100%);
+background: linear-gradient(to bottom, #4b6d82 0%, #274f69 66%, #0F3C59 100%);
+
+}
+
+/*#overallTable tr:first-child td {
+   border-left: 2px solid #D0E4F5;
+}
+#overallTable tr:first-child:first-child {
+   border-left: none;
+}
+*/
+#overallTable tr:last-child {
+  font-size: 13px;
+  font-weight: bold;
+  color: black;
+  background-color: #C8DBEE;
+text-align: center;
+}
+
+#settingsA {
+	font-family:Arial;
+	font-weight:normal;
+	color:#8c8c8c;
+
+}
+
+#settingsB {
+	font-family:Arial;
+	font-weight:normal;
+	color:#8c8c8c;
+
+
+}
+.videopopup {
+  visibility: hidden;
+  position: absolute;
+	top: 30%;
+  	left: 30%;
+  margin: 20px;
+	z-index:1000;
+  background-color: #f0ede3;
+border: 2px solid #000000;
+-moz-border-radius: 9px;
+-webkit-border-radius: 9px;
+border-radius: 9px;
+-moz-box-shadow: 0px 0px 9px #000000;
+-webkit-box-shadow: 0px 0px 9px #000000;
+box-shadow: 0px 0px 9px #000000;
+padding: 5px;
+}
+.popUp {
+  display: none;
+	position: absolute;
+	top: 30%;
+	left: 30%;
+	width: 30%;
+	height: 50%;
+	margin: 20px;
+	font-family:Arial;
+	z-index:1000;
+	text-align: center;
+	background-color: #f0ede3;
+border: 2px solid #000000;
+-moz-border-radius: 9px;
+-webkit-border-radius: 9px;
+border-radius: 9px;
+/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+-moz-box-shadow: 0px 0px 9px #000000;
+-webkit-box-shadow: 0px 0px 9px #000000;
+box-shadow: 0px 0px 9px #000000;
+/*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
+/*overflow:scroll;*/
+padding: 5px;
+
+}
+
+#popUp_text{
+	width: 100%;
+	height: 70%;
+	overflow:auto;
+	border: none;
+	text-align: center;
+	font-family: Arial;
+  font-size:1.35em;
+	 white-space: pre-wrap;      /* CSS3 */
+   white-space: -moz-pre-wrap; /* Firefox */
+   white-space: -pre-wrap;     /* Opera <7 */
+   white-space: -o-pre-wrap;   /* Opera 7 */
+   word-wrap: break-word;      /* IE */
+}
+.popUp_options {
+  width: 40px;
+  height: 40px;
+}
+.popUp_button {
+
+	background-color:#44c767;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:2% 4%;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.popUp_button:hover {
+	background-color:#5cbf2a;
+}
+.popUp_button:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+.instructions{
+	width:100%;
+	height: 80%;
+
+}
+ .gameInstructions {
+	background-color:white;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	padding:2% 4%;
+	position: absolute;
+	top: 20%;
+	left: 20%;
+	width: 40%;
+	z-index: 1000;
+	text-align: center;
+  overflow-y: scroll;
+  height: 60%;
+  max-height: 500px;
+  }
+
+
+.buttonIcons {
+  width:35px;
+  visibility: hidden;
+  vertical-align: text-bottom;
+	cursor:pointer;
+}
+
+#version{
+	position:absolute;
+	top:90%;
+	left:2%;
+	width:50px;
+	height:30px;
+	font-family:Arial;
+	font-size:10px;
+
+}
+
+/* Dropdown Button */
+.dropbtn {
+
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+
+}
+
+/* The container <div> - needed to position the dropdown content */
+.simpleDropdown {
+	width: 10%;
+	height: 10%;
+    position: relative;
+    display: inline-block;
+
+}
+
+.simpleDropdown:hover .simpleDropdown-content {
+  display: block;
+}
+/* Dropdown Content (Hidden by Default) */
+.simpleDropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 500;
+}
+.simpleDropdown-content span {
+    color: black;
+	font-family:verdana, sans-serif;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+.simpleDropdown-content span:hover {background-color: #f1f1f1}
+/* Links inside the dropdown */
+.simpleDropdown-content a {
+    color: black;
+	font-family:verdana, sans-serif;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.simpleDropdown-content a:hover {background-color: #f1f1f1}
+
+
+.icon_manual {
+	width:10px;
+	height:10px;
+	background-image: url("../media/imgs/manual.png");
+	 background-repeat: no-repeat;
+}

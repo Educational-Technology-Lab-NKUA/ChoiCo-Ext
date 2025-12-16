@@ -1,0 +1,315 @@
+/*
+    This file is part of "ChoiCo" a web application for designing digital games, written by Marianthi Grizioti for the National and Kapodistrian University of Athens (Educational Technology Lab).
+    Copyright (C) 2017-2018.
+    ChoiCo is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    ChoiCo is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+*/
+a {
+text-decoration:none;
+
+}
+
+#designBoard {
+
+
+margin-top: 50px;
+}
+#sideCol {
+	z-index:100;
+	list-style-type: none;
+ 	font-family: Tahoma, Arial, sans-serif;
+ 	font-size: 12px;
+	float: left;
+	max-width:50px;
+		}
+#sideCol ul {
+	padding: 5px;
+
+}
+#sideCol li {
+	 z-index:100;
+	list-style-type: none;
+
+}
+#sideCol input {
+	width:30px; height:30px;
+	float:left;
+		cursor:pointer;
+		 margin-right:2%;
+		 margin-top: 15px;
+		   overflow: hidden;
+
+}
+#upload {
+ margin-top: 15px;
+width:30px; height:30px;
+	 margin-right:2%;
+	background:url(../media/imgs/uploadImage.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+
+#upload input {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+}
+
+
+
+
+#label {
+	font-family:Verdana;
+	size: 15px;
+
+
+}
+#otherSettings {
+	width: 30%;
+	height: 20%;
+	/*min-width: 200px;
+	min-height: 80px;*/
+	position: absolute;
+	top: 10%;
+	left: 75%;
+	font-family:Verdana;
+	size: 15px;
+}
+
+.otherProgramming {
+	width: 10%;
+height: 20%;
+position: absolute;
+top: 30%;
+left: 88%;
+}
+
+
+.gameButtons {
+	width:25%;
+	margin-left: 75%;
+	visibility: hidden;
+	vertical-align: text-bottom;
+}
+.editor {
+height: 100%;
+z-index:450;
+border: 1px solid black;
+
+
+}
+
+
+.blocklySvg {
+
+
+}
+.b-tab-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.b-tab-nav_link {
+  flex: 1;
+  margin-right: 4px;
+  padding: 12px;
+  color: #fff;
+  background-color: #b3b3b3;
+  text-align: center;
+  transition: color 0.3s;
+}
+.b-tab-nav_link:last-child {
+  margin-right: 0;
+}
+
+.b-tab-nav_link:hover {
+  color: #6d6d6d;
+}
+
+.b-tab-nav_link.is-active {
+  color: #dc446e;
+  background-color: #e7e7e7;
+}
+
+.b-tab-nav_link i,
+.b-tab-nav_link span {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.b-tab-nav_link i {
+  font-size: 18px;
+}
+
+.b-tab-nav_link span {
+  /*display: none;*/
+  font-size: 18px;
+}
+
+.b-tab {
+  display: none;
+  background-color: #e7e7e7;
+}
+
+.b-tab.is-active {
+  display: block;
+}
+
+.b-content {
+
+  padding: 0.5rem;
+  height: 600px;
+}
+
+.rClickBox {
+	width: 100px;
+	padding: 10px;
+	font-family: Tahoma, Arial, sans-serif;
+ 	font-size: 12px;
+	background-color:#e7e7e7;
+display:none;
+	z-index: 1000;
+	border: 1px solid black;
+
+}
+
+.workspace {
+
+}
+
+.designButtons {
+	cursor: pointer;
+   border-top: 1px solid #02260e;
+   background: #348248;
+   background: -webkit-gradient(linear, left top, left bottom, from(#165221), to(#348248));
+   background: -webkit-linear-gradient(top, #165221, #348248);
+   background: -moz-linear-gradient(top, #165221, #348248);
+   background: -ms-linear-gradient(top, #165221, #348248);
+   background: -o-linear-gradient(top, #165221, #348248);
+   padding: 4.5px 9px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 12px;
+   font-family: Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.designButtons:hover {
+   border-top-color: #319149;
+   background: #319149;
+   color: #ccc;
+   }
+.designButtons:active {
+   border-top-color: #021f07;
+   background: #021f07;
+   }
+.pointSettings {
+	position: absolute;
+	top:50%;
+	left:30%;
+	width: 200px;
+	height: auto;
+	border: 1px solid black;
+	background-color: white;
+	z-index: 1000;
+
+}
+
+.mapLayersSettings {
+	position: absolute;
+	top:10%;
+	left:10%;
+	width: 400px;
+	height: auto;
+	background-color: #f0ede3;
+border: 2px solid #000000;
+-moz-border-radius: 9px;
+-webkit-border-radius: 9px;
+border-radius: 9px;
+-moz-box-shadow: 0px 0px 9px #000000;
+-webkit-box-shadow: 0px 0px 9px #000000;
+box-shadow: 0px 0px 9px #000000;
+padding: 5px;
+	z-index: 1000;
+	visibility: hidden;
+	font-family: sans-serif;
+	font-size: 14px;
+	overflow: hidden;
+}
+.layersSelect {
+	margin-left: 2px;
+	width: 300px;
+	border: 1px solid #25322599;
+
+}
+.layersSelect option:hover {
+	cursor: pointer;
+	background-color: #e7e7e7;
+}
+.layersSelect option:checked{
+	outline: none;
+	box-shadow: 0 0 10px 100px ;
+}
+#designInstructions{
+	display: none;
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	width:40%;
+	z-index: 1000;
+}
+
+.popUpHeader {
+padding: 2px 16px;
+background-color: #5f975f;
+color: white;
+font-size: 18px;
+border:#000 1px solid;
+border-top-left-radius:5px; -webkit-border-top-left-radius:5px; -webkit-border-top-right-radius:5px;
+ -moz-border-top-left-radius:5px; 	 -moz-border-top-right-radius:5px;
+	border-top-right-radius:5px;
+}
+.popUpHeader img {
+	float: right;
+}
+.popUpHeader img:hover,
+.popUpHeader img:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+#instructionsEditor{
+	   width: 100%;
+		 border-radius: 4px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	box-shadow: 0 0 3px #999;
+	-webkit-box-shadow: 0 0 3px #999;
+	-moz-box-shadow: 0 0 3px #999;
+	overflow: hidden;
+	transition: box-shadow 0.4s, border 0.4s;
+	-webkit-transition: -webkit-box-shadow 0.4s, border 0.4s;
+	-moz-transition: -moz-box-shadow 0.4s, border 0.4s;
+	-o-transition: -o-box-shadow 0.4s, border 0.4s;
+   }

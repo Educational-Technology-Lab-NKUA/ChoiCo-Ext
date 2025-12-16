@@ -1,0 +1,26 @@
+.gm-style-iw button {
+  display: none !important;
+}
+
+/*.gm-style .gm-style-iw {
+  font-weight: 300;
+font-size: 14px;
+  height: 25px !important;
+}*/
+
+.gm-style .gm-style-iw-c {
+padding:5px;
+}
+
+.icon-location::before {
+	content: "\f601";
+}
+
+.gmMenu {
+  margin-left: 0%;
+  margin-top: 1.5%;
+}
+
+.gmButton {
+  margin-left: 3px;
+}

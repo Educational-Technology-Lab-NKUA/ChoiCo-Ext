@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/manual.css?v=1.0.2"/>
+<title>ChoiCo blocks - English</title>
+</head>
+
+<body>
+<h1>The Blocks Library of ChoiCo
+</h1>
+<h3>Block Category</h3>
+<ul>
+  <li>
+    <h4><a href="#Initialize">Initialize </a></h4>
+  </li>
+  <li>
+    <h4><a href="#Conditions">Conditions</a></h4>
+  </li>
+  <li>
+    <h4><a href="#Variables">Variables</a></h4>
+  </li>
+  <li>
+    <h4><a href="#Maths">Maths</a></h4>
+  </li>
+  <li>
+    <h4><a href="#gameActions">Game Actions</a></h4>
+  </li>
+  <li>
+    <h4><a href="#mapAcitions">Map Actions</a></h4>
+  </li>
+  <li>
+    <h4><a href="#gameflow">Game Flow</a></h4>
+  </li>
+</ul>
+<p>&nbsp;</p>
+<h2 id="Initialize" >Category: Initialize</h2>
+<div id="gameStartBlock" name="gameStartBlock" class = "blockDescription"><p><strong><u>Block: </u></strong><img src="manuals/blocks/gamestart.JPG" width="136" height="74" alt="onGameStart" /></p>
+<p><u><strong>Description: </strong></u>All the initial settings of the game must​ be placed under this block</p>
+<p><u><strong>Modifications: </strong></u>-</p>
+<p><u><strong>Availiabe in tab (s): </strong></u>Initial Settings</p>
+</div>
+<hr />
+<div id="setFieldBlock" name="setFieldBlock" class = "blockDescription"><p><strong><u>Block: </u></strong><img src="manuals/blocks/setFieldTo.JPG" width="285" height="66" alt="setFieldTo" /></p>
+<p><u><strong>Description: </strong></u>Sets the initial value of a game attribute (i.e. FieldA) to a number (i.e. 0)</p>
+<p><u><strong>Modifications: </strong></u>Click on the name of the field to appear a dropdown menu with the available fields to  select from. Click on the number box to change the number</p>
+<p><u><strong>Availiabe in tab (s): </strong></u>Initial Settings</p>
+</div>
+<hr />
+<hr />
+<h2 id="Conditions" >Category: Conditions</h2>
+<div id="ifBlock" name="ifBlock" class = "blockDescription"> <p><strong><u>Block: </u></strong><img src="manuals/blocks/if.JPG" width="125" height="104" alt="if" /></p>
+<p><u><strong>Description: </strong></u>A conditional statement block. It needs a condition block to be connected at the top and some  blocks to be included inside. If the statement of the condition is true, then the blocks it includes will be executed.</p>
+<p><u><strong>Modifications: </strong></u>-</p>
+<p><u><strong>Availiabe in tab (s):</strong></u> Game play rules, End rules</p>
+<p>Examples of use: <img src="manuals/blocks/ifExample.JPG" width="374" height="108" alt="if example" />&quot;If the attribute FieldA is greater than 3 then apear a pop up with the message &quot;Attention!&quot;</p>
+</div>
+<hr />
+<div id="ifelseBlock" name="ifelseBlock" class = "blockDescription"><p><strong><u>Block: </u></strong><img src="manuals/blocks/ifelse.JPG" width="176" height="153" alt="if" /></p>
+<p><strong>ATTENTION:</strong> ​<em>To use this block you have to click on the settings icon of an if block and create the if else  block like below! </em></p>
+<p>&nbsp;</p>
+<p><u><strong>Description: </strong></u>A conditional statement block. It needs a statement to be connected at the top and some  blocks to be included inside. If the statement is true, then the first group of blocks will be executed else  the second group of blocks will be executed. </p>
+<p><u><strong>Modifications: </strong></u>-</p>
+<p><u><strong>Availiabe in tab (s):</strong></u> Game play rules, End rules</p>
+<p><strong><u>Example of use: <img src="manuals/blocks/ifelseexample.JPG" width="351" height="144" alt="if else example" /></u></strong> If the attribute fieldA is lower than 50 pop up a window with the message 'Attention' else play the sound 'beep'</p>
+</div>
+<hr />
+<div id="ifelseifBlock" name="ifelseifBlock" class = "blockDescription"> <p><strong><u>Block: </u></strong><img src="manuals/blocks/ifelse.JPG" width="145" height="136" alt="if" /></p>
+<p><strong>ATTENTION:</strong> ​<em>To use this block you have to click on the settings icon of an if block and create the if else if block like below! </em></p>
+<p><img src="manuals/blocks/ifelseanim.gif" width="355" height="213" alt="if else gif" /></p>
+<p><u><strong>Description: </strong></u>A conditional statement block. It needs a statement to be connected at the top and some  blocks to be included inside. If the statement is true, then the first group of blocks will be executed else  if the second condition is true then the second group of blocks will be executed.</p>
+<p><u><strong>Modifications: </strong></u>-</p>
+<p><u><strong>Availiabe in tab (s):</strong></u> Game play rules, End rules</p>
+<p><strong><u>Example of use: <img src="manuals/blocks/ifelseifexample.JPG" width="356" height="187" alt="if else example" /></u></strong></p>
+<p> If the attribute fieldA is lower than 50 then pop up a window with the message 'Attention' else if the Attribute FieldA is greater than 100 thenplay the sound 'beep'</p>
+</div>
+<hr />
+<div id="statementBlock" name="statementBlock" class = "blockDescription"> <p><strong><u>Block: </u></strong> <img src="manuals/blocks/field.JPG" width="281" height="109" alt="statement" /></p>
+<p><strong>ATTENTION:</strong> ​<strong>This is an input block</strong> This block must be  connected as input to other blocks in order to work. This block represents a  mathematical condition. It DOES NOT set the value of FieldA to a number!</p>
+<p><u><strong>Description: </strong></u>A  condition block that can be used as input for  the <a href="#ifBlock"><strong>if blocks</strong> </a>.  The block describes a  mathematical condition (inequality) and it returns true if the condition is  true or false if it is false. It is a complex block that consists of three  parts: the pink block which is the first part of the condition (FieldA), the  operator (=,&lt;,&gt; etc) and the second part of the condition which is by  default a number. The 2 parts of the condition can be removed and be replaced  by other same type blocks. </p>
+<p><u><strong>Modifications: </strong></u></p>
+<p><u><strong>Availiabe in tab (s):</strong></u> Game play rules, End rules</p>
+<p><strong><u>Example of use:</u></strong><a href="#ifBlock">See  the example of if block</a></p>
+</div>
+<hr />
+<div id = "andBlock" name="andBlock" class = "blockDescription"> <p><strong><u>Block: </u></strong> <img src="manuals/blocks/and.JPG" width="496" height="83" alt="statement" /></p>
+<p><strong>ATTENTION:</strong> ​<strong>This is an input block</strong> This block must be  connected as input to other blocks in order to work. This block represents a  mathematical condition. It DOES NOT set the value of FieldA to a number!</p>
+<p><u><strong>Description: </strong></u>A logical operation block  that can be used as input for the if blocks.   The block contains 2 mathematical condition blocks and a logical  operator (and, or). The <strong>and</strong> block  will return true only if <strong>both </strong>of its  two inputs are also true. The <strong>or</strong> block will return true if <strong>either</strong> of  its two inputs are true.</p>
+<p><u><strong>Modifications: </strong></u></p>
+<p><u><strong>Availiabe in tab (s):</strong></u> Game play rules, End rules</p>
+<p><strong><u>Example of use:</u></strong></p>
+</div>
+<hr />
+<div id="selectedPointBlock" class = "blockDescription"><p><strong><u>Block: </u></strong> <img src="manuals/blocks/selectedPoint.JPG" width="206" height="30" alt="statement" /></p>
+<p><strong>ATTENTION:</strong> ​<strong>This is an input condition block</strong> This block must be  connected as input to other blocks in order to work. </p>
+<p><u><strong>Description: </strong></u>A logical operation block  that can be used as input for the <a href="#ifBlock"> <strong> if blocks </strong> </a>.   The block checks if the currently selected point is the one that is written on the right part. If it is it returns <strong>true</strong>. If it is not it returns <strong>false</strong>.</p>
+<p><u><strong>Modifications: </strong></u>Click the name of the point to select another one from a dropdown menu</p>
+<p><u><strong>Availiabe in tab (s):</strong></u> Game play rules, End rules</p>
+<p><strong><u>Example of use: </u></strong><img src="manuals/blocks/selectedPoint example.JPG" width="267" height="90" alt="selected point example" />If the player selects the point House then play the sound &quot;doorbell&quot;.</p>
+</div>
+<hr />
+<h2 id="Variables">Category: Variables</h2>
+<div id="fieldBlock" class = "blockDescription"><p><strong><u>Block: </u></strong> <img src="manuals/blocks/fieldA.JPG" width="98" height="34" alt="statement" /></p>
+<p><strong>ATTENTION:</strong> ​<strong>This is an input variable block</strong> This block must be  connected as input to other blocks in order to work. </p>
+<p><u><strong>Description: </strong></u><strong><u>:</u></strong> This block returns the current value of a game&rsquo;s attribute (i.e. FieldA)</p>
+<p><u><strong>Modifications: </strong></u> Click on the name of the attribute to select  an attribute from the list of the game attributes.</p>
+<p><u><strong>Availiabe in tab (s):</strong></u> Game play rules, End rules</p>
+<p><strong><u>Example of use:</u></strong><u> </u> <strong><a href="#ifBlock">  Look the conditional blocks (if-else). </a> </strong> </p>
+</div>
+<hr />
+<div id="movesCounterBlock" class = "blockDescription"><p><strong><u>Block: </u></strong> <img src="manuals/blocks/counter.JPG" width="131" height="43" alt="statement" /></p>
+<p><strong>ATTENTION:</strong> ​<strong>This is an input variable block</strong> This block must be  connected as input to other blocks in order to work. </p>
+<p><u><strong>Description: </strong></u><strong><u>:</u></strong> This block returns the number of the current turn of the player. I.e. after the first selection of the player it returns the number 1, after the second the number 2 etc.</p>
+<p><u><strong>Modifications: </strong></u> none.</p>
+<p><u><strong>Availiabe in tab (s):</strong></u> Game play rules, End rules</p>
+<p><strong><u>Example of use: <img src="manuals/blocks/movescounter example.JPG" width="359" height="73" alt="moves counter example" /></u></strong> <strong>If the player is on his/hers 10th turn pop up the message &quot;You are half way to the end&quot;</strong></p>
+</div>
+<hr />
+<hr />
+<h2 id="Maths">Category: Maths</h2>
+<div id="numberBlock" class = "blockDescription"><p><strong><u>Block: </u></strong> <img src="manuals/blocks/number.JPG" width="54" height="46" alt="statement" /></p>
+<p><strong>ATTENTION:</strong> ​<strong>This is an input variable block</strong> This block must be  connected as input to other blocks in order to work. </p>
+<p><u><strong>Description: </strong></u><strong><u>:</u></strong>A number block. It returns the  number it has.</p>
+<p><u><strong>Modifications: </strong></u> Click inside the box to  change the value of the number.</p>
+<p><u><strong>Availiabe in tab (s):</strong></u> Game play rules, End rules</p>
+</div>
+<hr />
+
+<div id="mathOperationBlock" class = "blockDescription"> <p><strong><u>Block: </u></strong> <img src="manuals/blocks/add.JPG" width="123" height="54" alt="mathOperationBlock" /></p>
+<p><strong>ATTENTION:</strong> ​<strong>This is an input variable block</strong> This block must be  connected as input to other blocks in order to work. </p>
+<p><u><strong>Description: </strong></u><strong><u>:</u></strong>A mathematical operation  block. This block makes an operation between two parts and returns the result  as output. The available operators are + (sum), - (subtraction) , ÷(division),  x (multiplication), ^ (power).</p>
+<p><u><strong>Modifications: </strong></u> Click on the operator  symbol to select one of the available operators. Drag and drop the desired  blocks in the empty spaces to create the operation (usually number blocks or  attributes)</p>
+<p><u><strong>Availiabe in tab (s):</strong></u> Game play rules, End rules</p>
+<p><strong><u>Examples of use:</u></strong></p>
+<p><img src="manuals/blocks/math example.JPG" width="450" height="100" alt="math example" /></p>
+<p>If the <strong>sum</strong> of the attributes &quot;Wood&quot; and &quot;Iron&quot; is greater than 50 then alert the message &quot;You have gathered a lot of material&quot;</p>
+</div>
+<hr />
+<div id="mathFunctionBlock" class = "blockDescription">
+<p><strong><u>Block: </u></strong> <img src="manuals/blocks/operations.JPG" width="160" height="37" alt="statement" /></p>
+<p><strong>ATTENTION:</strong> ​<strong>This is an input variable block</strong> This block must be  connected as input to other blocks in order to work. </p>
+<p><u><strong>Description: </strong></u><strong><u>:</u></strong>A mathematical function  block. Returns the result of the selected mathematical function for the block that takes as input. The input block can be a number block or a field block The available functions square root, absolut, negative (-), ln, log10, e^, 10^. </p>
+<p><u><strong>Modifications: </strong></u> Click on the function to select one of the available functions. Drag and drop the input block to the right side</p>
+<p><u><strong>Availiabe in tab (s):</strong></u> Game play rules, End rules</p>
+<p><strong><u>Examples of use:</u></strong></p>
+<p><img src="manuals/blocks/operations example.JPG" width="201" height="52" alt="math example" /></p>
+<p>Returns the square root of the attribute &quot;Wood&quot;</p>
+</div>
+<hr />
+<hr />
+<h2 id="gameActions">Category: Game Actions</h2>
+<div id="printBlock" class = "blockDescription">
+  <p><strong><u>Block: </u></strong> <img src="manuals/blocks/print.JPG" width="100" height="52" alt="statement" /></p>
+  <p><u><strong>Description: </strong></u><strong><u>:</u></strong> This block  prints its input to the log window of the game. It can print any input block in  the form of plain text (the value of a variable, the result of a mathematical  operation or a text) </p>
+<p><u><strong>Modifications: </strong></u> None</p>
+  <p><u><strong>Availiabe in tab (s):</strong></u> Game play rules, End rules</p>
+  <p><strong><u>Examples of use:</u></strong></p>
+  <p>a) <img src="manuals/blocks/printExample1.JPG" width="234" height="44" alt="printExample1" />b)<img src="manuals/blocks/printExample2.JPG" width="177" height="49" alt="printExample2" />c)<img src="manuals/blocks/printExample3.JPG" width="320" height="71" alt="printExample3" /></p>
+  <p><em>a) Prints the <strong>text</strong> &ldquo;Very good&rdquo; b) Prints the  current <strong>value of variable</strong> Money c)  Prints <strong>the result</strong> of the operation  &ldquo;Money + 5&rdquo;</em><strong><em><u> </u></em></strong></p>
+</div>
+<hr />
+<div id="textBlock" class = "blockDescription">
+  <p><strong><u>Block: </u></strong> <img src="manuals/blocks/text.JPG" width="122" height="64" alt="statement" /></p>
+  <p><strong>ATTENTION:</strong> ​<strong>This is an input variable block</strong> This block must be  connected as input to other blocks in order to work. </p>
+  <p><u><strong>Description: </strong></u><strong><u>:</u></strong>This  block returns the text it has written in it. You can type a text in the green  box</p>
+  <p><u><strong>Modifications: </strong></u> Click in the box to type any text.</p>
+  <p><u><strong>Availiabe in tab (s):</strong></u> Game play rules, End rules</p>
+  <p><strong><u>Examples of use:</u></strong></p>
+  <p>a) <img src="manuals/blocks/printExample1.JPG" width="234" height="44" alt="printExample1" /></p>
+  <p><em>a) Prints the <strong>text</strong> &ldquo;Very good&rdquo;</em></p>
+</div>
+<hr />
+<div id="printWithTextBlock" class = "blockDescription">
+  <p><strong><u>Block: </u></strong> <img src="manuals/blocks/PrintText.JPG" width="256" height="76" alt="statement" /></p>
+  <p><u><strong>Description: </strong></u><strong><u>:</u></strong>This  block merges two (or more) different inpupts into one text output which then is printed to the console. </p>
+  <p><u><strong>Modifications: </strong></u> To create more availiable inputs click on the blue button and drug one more 'item' block as it is shown below:</p>
+  <p><img src="manuals/blocks/createTextGif.gif" width="304" height="264" alt="create text gif" /></p>
+  <p><u><strong>Availiabe in tab (s):</strong></u> Game play rules, End rules</p>
+  <p><strong><u>Examples of use:</u></strong></p>
+  <p>a) <img src="manuals/blocks/printTextExample1.JPG" width="431" height="85" alt="printExample1" />b)<img src="manuals/blocks/printTextExample2.JPG" width="494" height="129" alt="printWithTextExample" /></p>
+  <p>a) Prints a  text that contains the text &ldquo;Your Money is&rdquo; followed by the current value of  the variable Money. For example if the current value of the variable Money is  100 the above block will print to the game log &ldquo;<em>Your Money is 100</em>&rdquo;</p>
+  <p>b) A more complicated example with 4 inputs. In the case that moves counter is 8 and fieldB is 100 this block will print to the game log the text: &quot;<em>Your Money in move: 8 is: 100</em>&quot;</p>
+</div>
+<hr />
+<div id="popUpBlock" class = "blockDescription">
+  <p><strong><u>Block: </u></strong> <img src="manuals/blocks/popup.JPG" width="244" height="40" alt="statement" /></p>
+  <p><u><strong>Description: </strong></u><strong><u>:</u></strong>Shows a  pop up window that contains the given text message. </p>
+  <p><u><strong>Modifications: </strong></u> Click in the box to type any text</p>
+  <p><u><strong>Availiabe in tab (s):</strong></u> Game play rules, End rules</p>
+  <p><strong><u>Examples of use:</u></strong></p>
+  <p><img src="manuals/blocks/popupexampleEng.JPG" width="355" height="72" alt="printExample1" /></p>
+  <p>Shows a pop up window with the text &quot;Be careful!&quot;</p>
+</div>
+<hr />
+<div id="playSoundBlock" class = "blockDescription">
+  <p><strong><u>Block: </u></strong> <img src="manuals/blocks/playsound.JPG" width="195" height="60" alt="statement" /></p>
+  <p><u><strong>Description: </strong></u><strong><u>:</u></strong>Plays the selected sound</p>
+  <p><u><strong>Modifications: </strong></u> Click in the box to select a sound from the dropdown menu</p>
+  <p><u><strong>Availiabe in tab (s):</strong></u> Game play rules, End rules</p>
+  <p>&nbsp;</p>
+</div>
+<hr />
+<div id="playVideoBlock" class = "blockDescription">
+  <p><strong><u>Block: </u></strong> <img src="manuals/blocks/playvideo.JPG" width="233" height="73" alt="statement" /></p>
+  <p><u><strong>Description: </strong></u><strong><u>:</u></strong>Shows a player with a video from youtube. The video url must be written in the green box</p>
+  <p><u><strong>Modifications: </strong></u> Click in the box to paste the video url</p>
+  <p><u><strong>Availiabe in tab (s):</strong></u> Game play rules, End rules</p>
+  <p><strong><u>Examples of use:</u></strong><img src="manuals/blocks/playVideoExample.JPG" width="501" height="68" alt="play video example" /></p>
+  <p>&nbsp;</p>
+</div>
+<hr />
+<hr />
+<h2 id="mapAcitions">Category: Map Controls</h2>
+<div id="setBackgroundBlock" class = "blockDescription">
+  <p><strong><u>Block: </u></strong> <img src="manuals/blocks/setbackground.JPG" width="228" height="46" alt="statement" /></p>
+  <p><u><strong>Description: </strong></u><strong><u>:</u></strong>Sets the bakcground of the current layer to the image given by the url</p>
+  <p><u><strong>Modifications: </strong></u> Click in the box to paste the image url</p>
+  <p>Attention: It need the url of the image file (right click-&gt; copy image url)</p>
+  <p><u><strong>Availiabe in tab (s):</strong></u> Game play rules, End rules</p>
+  <p><strong><u>Examples of use:</u></strong><img src="manuals/blocks/setbackgroundExample.JPG" width="559" height="51" alt="play video example" /></p>
+  <p>&nbsp;</p>
+</div>
+<hr />
+<div id="setBackgroundSecBlock" class = "blockDescription">
+  <p><strong><u>Block: </u></strong> <img src="manuals/blocks/setbackgroundsec.JPG" width="363" height="56" alt="statement" /></p>
+  <p><u><strong>Description: </strong></u><strong><u>:</u></strong>Sets as temporary  bakcground of the current layer  the image given by the url for the number of seconds. After the number of seconds the previous background returns.</p>
+  <p><u><strong>Modifications: </strong></u> Click in the brown box to paste the image url. Click in the blue box to set the number of seconds</p>
+  <p>Attention: It need the url of the image file (right click-&gt; copy image url)</p>
+  <p><u><strong>Availiabe in tab (s):</strong></u> Game play rules, End rules</p>
+  <p><strong><u>Examples of use:</u></strong><img src="manuals/blocks/setbacksecexm.JPG" width="717" height="74" alt="play video example" /></p>
+  <p>Sets the background of the current layer to the  image of the given url for 5 seconds. </p>
+</div>
+<hr />
+<div id="setLayerBlock" class = "blockDescription">
+  <p><strong><u>Block: </u></strong> <img src="manuals/blocks/setlayer.JPG" width="205" height="42" alt="statement" /></p>
+  <p><u><strong>Description: </strong></u><strong><u>:</u></strong>Changes the active layer to the selected one</p>
+  <p><u><strong>Modifications: </strong></u> Click in the brown box to select a layer from the dropdown menu </p>
+  <p><u><strong>Availiabe in tab (s):</strong></u> Game play rules, End rules</p>
+</div>
+<hr />
+<p>&nbsp;</p>
+<div id="showPointBlock" class = "blockDescription">
+  <p><strong><u>Block: </u></strong> <img src="manuals/blocks/showPointex.JPG" width="187" height="48" alt="statement" /></p>
+  <p><u><strong>Description: </strong></u><strong><u>:</u></strong> Makes the selected point (item) visible on the scene</p>
+  <p><u><strong>Modifications: </strong></u> Click in the brown box to select a point (item) from the dropdown menu  </p>
+  <p><u><strong>Availiabe in tab (s):</strong></u> Game play rules, End rules</p>
+</div>
+<hr />
+<div id="hidePointBlock" class = "blockDescription">
+  <p><strong><u>Block: </u></strong> <img src="manuals/blocks/hidePointEx.JPG" width="183" height="50" alt="statement" /></p>
+  <p><u><strong>Description: </strong></u><strong><u>:</u></strong> Makes the selected point (item) invisible.</p>
+  <p><u><strong>Modifications: </strong></u> Click in the brown box to select a point (item) from the dropdown menu </p>
+  <p><u><strong>Availiabe in tab (s):</strong></u> Game play rules, End rules</p>
+</div>
+<hr />
+<div id="showAllBlock" class = "blockDescription">
+  <p><strong><u>Block: </u></strong> <img src="manuals/blocks/showAll.JPG" width="144" height="40" alt="statement" /></p>
+  <p><u><strong>Description: </strong></u><strong><u>:</u></strong> Makes <strong>all </strong>the points (items) of the <strong>active laye</strong>r visible</p>
+  <p><u><strong>Modifications: </strong></u> None</p>
+  <p><u><strong>Availiabe in tab (s):</strong></u> Game play rules, End rules</p>
+</div>
+<hr />
+<div id="hideAllBlock" class = "blockDescription">
+  <p><strong><u>Block: </u></strong> <img src="manuals/blocks/hideall.JPG" width="131" height="38" alt="statement" /></p>
+  <p><u><strong>Description: </strong></u><strong><u>:</u></strong> Makes <strong>all </strong>the points (items) of the <strong>active layer </strong>invisible</p>
+  <p><u><strong>Modifications: </strong></u> None</p>
+  <p><u><strong>Availiabe in tab (s):</strong></u> Game play rules, End rules</p>
+</div>
+<hr />
+<hr />
+<h2 id="gameflow">Category: Game Flow</h2>
+<div id="gameoverBlock" class = "blockDescription">
+  <p><strong><u>Block: </u></strong> <img src="manuals/blocks/gameover.JPG" width="113" height="44" alt="statement" /></p>
+  <p><u><strong>Description: </strong></u><strong><u>:</u></strong> Ends the game. A red popup with the text &quot;Game Over&quot; appears on screen. </p>
+  <p><u><strong>Modifications: </strong></u> None</p>
+  <p><u><strong>Availiabe in tab (s):</strong></u> End rules</p>
+</div>
+<p>&nbsp;</p>
+
+</body>
+</html>

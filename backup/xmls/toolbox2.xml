@@ -1,0 +1,162 @@
+<xml id="toolbox2" style="display:none">
+
+ <category name="Conditionals"  colour="#5b80a5">
+   <block type="controls_if"></block>
+ <block type="logic_compare">  </block>
+ <block type="logic_operation" >
+   <field name="OP">AND</field>
+ </block>
+  <block type="logic_compare">
+   <field name="OP">EQ</field>
+   <value name="A">
+     <block type="singleVar">
+     </block>
+   </value>
+   <value name="B">
+   <block type="math_number">
+   <field name="NUM">0</field>
+   </block>
+   </value>
+   </block>
+  <block type="logic_operation">
+  <field name="OP">AND</field>
+   <value name="A">
+   <block type="logic_compare">
+   <field name="OP">EQ</field>
+   <value name="A">
+   <block  type="singleVar"> </block>
+   </value>
+   <value name="B">
+   <block  type="math_number"><field name="NUM">0</field> </block>
+   </value>
+ </block>
+   </value>
+   <value name="B">
+   <block type="logic_compare">
+   <field name="OP">EQ</field>
+   <value name="A">
+   <block  type="singleVar">
+   </block>
+   </value>
+   <value name="B">
+   <block  type="math_number">
+   <field name="NUM">0</field>
+   </block>
+   </value>
+   </block>
+   </value>
+  </block>
+
+  <block type="current_point_check"></block>
+  <block type="logic_compare" id="selections" x="301" y="206"><field name="OP">EQ</field><value name="A"><block type="times_selected_check" id="selectionsNum"></block></value><value name="B"><block type="math_number" id="Ku0jt[%[qRvR6|-+Y)AH"><field name="NUM">1</field></block></value></block>
+    <block type="current_layer_check"></block>
+ </category>
+<category name="Variables" colour="#a55b80">
+
+ <block type="singleVar"> </block>
+ <block type="movescounter"> </block>
+
+ </category>
+ <category name="Math" colour="#5b6da5">
+   <block type="math_number">
+     <field name="NUM">0</field>
+   </block>
+   <block type="math_arithmetic">
+     <field name="OP">ADD</field>
+     <value name="A">
+       <shadow type="math_number">
+         <field name="NUM">1</field>
+       </shadow>
+     </value>
+     <value name="B">
+       <shadow type="math_number">
+         <field name="NUM">1</field>
+       </shadow>
+     </value>
+   </block>
+   <block type="math_single">
+     <field name="OP">ROOT</field>
+     <value name="NUM">
+       <shadow type="math_number">
+         <field name="NUM">9</field>
+       </shadow>
+     </value>
+   </block>
+   <block type="math_number_property">
+     <mutation divisor_input="false"></mutation>
+     <field name="PROPERTY">EVEN</field>
+     <value name="NUMBER_TO_CHECK">
+       <shadow type="math_number">
+         <field name="NUM">0</field>
+       </shadow>
+     </value>
+   </block>
+   <block type="math_round">
+     <field name="OP">ROUND</field>
+     <value name="NUM">
+       <shadow type="math_number">
+         <field name="NUM">3.1</field>
+       </shadow>
+     </value>
+   </block>
+   <block type="math_modulo">
+     <value name="DIVIDEND">
+       <shadow type="math_number">
+         <field name="NUM">64</field>
+       </shadow>
+     </value>
+     <value name="DIVISOR">
+       <shadow type="math_number">
+         <field name="NUM">10</field>
+       </shadow>
+     </value>
+   </block>
+   <block type="math_random_int">
+     <value name="FROM">
+       <shadow type="math_number">
+         <field name="NUM">1</field>
+       </shadow>
+     </value>
+     <value name="TO">
+       <shadow type="math_number">
+         <field name="NUM">100</field>
+       </shadow>
+     </value>
+   </block>
+ </category>
+ <category name="Game Actions" colour="#5ba593">
+ <block type="text"></block>
+   <block type="text_print"></block>
+
+
+ <block type="text_print" id="DPWMna3+q{*XS!?WQNcM" x="-13" y="88">
+   <value name="TEXT">
+     <shadow type="text" id="oCHj.d.H/qtW44UR5@lU">
+       <field name="TEXT">abc</field>
+     </shadow>
+     <block type="text_join" id="Nz8/|JeJM{u_57Ci8toy">
+       <mutation items="2"></mutation>
+     </block>
+   </value>
+ </block>
+  <block type="popup"></block>
+ <block type="sound"></block>
+ <block type="video"></block>
+ </category >
+ <category name="Map Actions" colour="#A6745C">
+    <block type="background"></block>
+   <block type="set_temporary_background">
+
+      <value name = "time">
+       <block type="math_number">
+         <field name="NUM">1</field>
+       </block>
+     </value>
+   </block>
+     <block type="change_layer"> </block>
+   <block type="show_point"></block>
+  <block type="hide_point"></block>
+  <block type="hide_all"></block>
+  <block type="show_all"></block>
+ </category>
+</xml>

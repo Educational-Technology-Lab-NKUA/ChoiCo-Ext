@@ -1,0 +1,7 @@
+<xml xmlns="http://www.w3.org/1999/xhtml" id="workspaceBlocks" style="display:none">
+  <block type="initialvalues" id="7%pi|u/wU`(M`t7@0~7Z" x="88" y="88">
+    <statement name="Initial Values">
+     <block type="initialValue" id="id1" x="-31" y="16"><field name="varName">Field1</field><value name="varVal"><block type="math_number" id="var1"><field name="NUM">0</field></block></value><next><block type="initialValue" id="id2"><field name="varName">Field2</field><value name="varVal"><block type="math_number" id="var2"><field name="NUM">0</field></block></value></block></next></block>
+    </statement>
+  </block>
+</xml>

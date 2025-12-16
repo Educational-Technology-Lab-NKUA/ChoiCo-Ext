@@ -1,0 +1,65 @@
+
+
+/*.gm-style .gm-style-iw {
+  font-weight: 300;
+font-size: 14px;
+  height: 25px !important;
+}*/
+
+.gm-style .gm-style-iw-c {
+padding:5px;
+}
+
+.icon-location::before {
+	content: "\f601";
+}
+
+.gmMenu {
+  margin-left: 0%;
+  margin-top: 1.5%;
+  padding: 8px;
+  max-width: 120px;
+}
+
+.gmButton {
+  margin: 3px;
+  font-size: 1.3em;
+}
+
+.gmSearchBox {
+  width: 25%;
+  height: 7%;
+  margin-top: 10px;
+}
+
+#place-autocomplete-card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 10px;
+  padding: 5px;
+  font-family: Roboto, sans-serif;
+  font-size: large;
+  font-weight: bold;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.labelText {
+  font-size: 14px !important;
+  
+}
+.aqiText {
+  font-weight: bold !important;
+}
+gmp-place-autocomplete {
+  width: 300px;
+}
+.markerLabel{
+  opacity: 0.5;
+}

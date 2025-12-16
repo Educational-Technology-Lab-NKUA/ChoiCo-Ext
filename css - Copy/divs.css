@@ -1,0 +1,20 @@
+
+#left {
+	width:25%;
+	float:left;
+	height:100%;
+	background-color: #00000;
+
+}
+#middle {
+	width:50%;
+	height:100%;
+	border: 1px solid black;
+
+}
+#right {
+	width:25%;
+	height:100%;
+	float:right;
+	background-color: #b3b3b3;
+}

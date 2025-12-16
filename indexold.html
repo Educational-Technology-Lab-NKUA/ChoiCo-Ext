@@ -1,0 +1,651 @@
+<!--
+    This file is part of "ChoiCo" a web application for designing digital games, written by Marianthi Grizioti for the National and Kapodistrian University of Athens (Educational Technology Lab).
+    Copyright (C) 2017-2018.
+    ChoiCo is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    ChoiCo is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv='cache-control' content='no-cache'>
+	<meta http-equiv='expires' content='0'>
+	<meta http-equiv='pragma' content='no-cache'>
+<meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<title>ChoiCo-Ex - Choices with Consequences - Extended Version</title>
+<link rel="icon" href="media/imgs/logo.png">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<link rel="stylesheet" href="js-libraries/Leaflet.label-master/dist/leaflet.label.css" />
+<link rel="stylesheet" href="css/map.css?v=3.0"/>
+<link rel="stylesheet" href="css/googlemap.css?v=3.0"/>
+<link rel="stylesheet" href="css/designMode.css?v=2.1" />
+<link rel="stylesheet" href="css/playMode.css?v=3.0" />
+<link rel="stylesheet" href="css/infoTable.css?v=3.0" />
+<link rel="stylesheet" href="css/scoreTable.css?v=3.0" />
+ <link rel="stylesheet" href="js-libraries/jquery-ui-1.11.4.custom/jquery-ui.css" type="text/css" charset="utf-8">
+ <link rel="stylesheet" href="js-libraries/jQuery-TE_v.1.4.0/jquery-te-1.4.0.css">
+<link rel="stylesheet" href="js-libraries/mediaelement/build/mediaelementplayer.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+  integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+  crossorigin=""/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/80af97c1ce.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+    integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+    crossorigin=""></script>
+		<!--Google Maps API for geolocation varsion -->
+		<!--	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwwYja3cLMZQxFARrhy99rubwBqCD3lcg"  defer></script>-->
+  <script src="js-libraries/jquery-1.11.3/jquery-1.11.3.min.js" type="text/javascript"></script>
+  <script src="js-libraries/jquery-ui-1.12.1.custom/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+  <script  src="js-libraries/jQuery-TE_v.1.4.0/jquery-te-1.4.0.min.js"></script>
+
+  <script src="js-libraries/Stuk-jszip-4cbaf0e/dist/jszip.min.js" type="text/javascript" charset="utf-8"></script>
+   <script src="js-libraries/google-blockly-7faafe0/blockly_compressed.js"></script>
+   <script src="js-libraries/google-blockly-7faafe0/blocks_compressed.js"></script>
+    <script src="js-libraries/google-blockly-7faafe0/msg/js/en.js"></script>
+    <script src="js-libraries/google-blockly-7faafe0/javascript_compressed.js"></script>
+    <script src="js-libraries/google-blockly-7faafe0/python_compressed.js"></script>
+    <script src="js-libraries/NeilFraser-JS-Interpreter-162ef40/acorn_interpreter.js"></script>
+    <script src="js-libraries/mediaelement/build/mediaelement-and-player.min.js"></script>
+    <script src="js-libraries/Leaflet.label-master/src/Label.js"></script>
+  	<script src="js-libraries/Leaflet.label-master/src/BaseMarkerMethods.js"></script>
+  	<script src="js-libraries/Leaflet.label-master/src/Marker.Label.js"></script>
+  	<script src="js-libraries/Leaflet.label-master/src/CircleMarker.Label.js"></script>
+  	<script src="js-libraries/Leaflet.label-master/src/Path.Label.js"></script>
+  	<script src="js-libraries/Leaflet.label-master/src/Map.Label.js"></script>
+  	<script src="js-libraries/Leaflet.label-master/src/FeatureGroup.Label.js"></script>
+  	<script src="js-libraries/moment/moment.js"></script>
+  	<script src="js-libraries/math.js"></script>
+  	<script src="core/mathjsExtention.js"></script>
+  	<script src="js-libraries/jszip-utils-master/dist/jszip-utils.js"></script>
+  	<script type="text/javascript" src="core/styles.js?v=2.0"></script>
+  	<script type="text/javascript" src="core/loaders.js?v=2.0"></script>
+  	<script type="text/javascript" src="core/initialSettings.js?v=2.0"></script>
+  	<script type="text/javascript" src="core/languages.js?v=3.4"></script>
+  	<script type="text/javascript" src="core/codingWorkspace.js?v=2.0"></script>
+    <script type="text/javascript" src="core/states.js?v=1.0"></script>
+  	<script type="text/javascript" src="core/analytics.js?v=1.0"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"  crossorigin="anonymous"></script>
+  <script src="js-libraries/jsPDF-master/LiberationSerif-Regular-normal.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-69014871-2"></script>
+  </head>
+	<script>
+  (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+    key: "AIzaSyBn3w3bIV_shdMULol4MbrFpGClcskM31M",
+    v: "weekly",
+    // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+    // Add other bootstrap parameters as needed, using camel case.
+  });
+</script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-69014871-2');
+  </script>
+
+  <body >
+
+    <nav class="navbar navbar-expand-sm navbar-custom fixed-top menu-area"  >
+      <button type="button" id="language" class="btn"><img id="languageImg" src="media/imgs/greek.png" width="20" /></button>
+      <div class="dropdown">
+        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fa fa-question-circle" aria-hidden="true"></i><span id="help"> Help </span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="http://etl.ppp.uoa.gr/choico/manuals/choico_user_manual_EN.pdf" target="_blank" id="manual">User Manual</a></li>
+          <li><a class="dropdown-item" href="blocksEn.html" target="_blank" id="manual">Blocks Library</a></li>
+          <li><a class="dropdown-item" href="http://tinyurl.com/choicosupport" target="_blank" id="contact">Contact Us</a></li>
+          <li><a class="dropdown-item" href="info/updates.html" target="_blank" id="updates">What's new</a></li>
+          <li><a class="dropdown-item" href="info/info.html" target="_blank" id="information">About ChoiCo</a></li>
+        </ul>
+      </div>
+      <button type="button" id="home" class="btn btn-success"><i class="fa fa-home" aria-hidden="true"></i><span id = "homeText"> Home </span></button>
+			<span id = "gameTitleText"> Game Title: </span> <span id= "gameTitle"> "Untitled"</span>
+      <ul class = "navbar-nav ms-auto">
+        <p class="bannerText" id="bannerText" > </p>
+        </ul>
+      <ul class="navbar-nav ms-auto" >
+        <span style = "padding: 5px;">
+          <button class="btn btn-success navbar-btn" id="play" title="play game"> <i class="fas fa-play"></i><span id="playText"> Play </span></button>
+					<button class="btn navbar-btn btn-warning" id="console" title="error messages" > <i class="fas fa-solid fa-code"></i> Debug</button>
+          <button class="btn btn-primary navbar-btn" id="save" title="save your game localy"> <i class="fas fa-download"></i> <span id="saveText"> Download </span></button>
+          <button class="btn btn-warning navbar-btn" id="back"title="edit game" > <i class="fas fa-edit"></i><span id="editText"> Edit </span></button>
+          <button class="btn navbar-btn" id="logButton"  title="game statistics"> <i class="fa fa-bar-chart"></i><span id="statsText"> Stats</span></button>
+          <button class="btn  navbar-btn" id="gameInfos" title="game instruction"> <i class="fa fa-info-circle"></i><span id="infoText">  Info </span> </button>
+        </span>
+      </ul>
+    </nav>
+
+  <div id= "introArea" class = "container-fluid intro-area">
+    <div class="row " id="header">
+      <div class = "col-sm-9 text-center" style="padding-left: 25%">
+				<img src="media/imgs/logo.png" alt="logo" id="introT" class = "logo">
+        <h3 class="display-10" id = "introST">A kit for designing and playing choice-driven simulation games</h3>
+        <h4  id = "intro_question"> What would you like to do? </h4>
+      </div>
+      </div>
+      <div class = "row" >
+        <div class = "col-sm-9 text-center" style="padding-left: 25%">
+        <button id="designButton" class="btn intro-button text-center"><i class="fas fa-tools" style=font-size:48px;"></i><span id="dbText"> Design a Game </span></button>
+        <input type="file" name="file" id="loadGame" class="inputfile" />
+        <label for="loadGame" class="btn intro-button" style="width:300px; "><i class="far fa-folder-open"style="font-size:48px;"></i><span id="lbText">	Load Game </span></label>
+
+        <button id="examplesButton" onclick="showExamplesTable();" class="btn intro-button"><i class="fas fa-gamepad"style="font-size:48px;"></i><span id="pbText"> Play Online Games </span></button>
+        <table id="examplesTable" style = "display: none">
+        <tbody>
+          <tr id="eatingOutGame"  >
+            <td><p> Eating Out </p></td>
+            <td> <p> <img src="media\imgs\examples_icons\eatingOut.png"> </p></td>
+            <td> <p id="eatingText"> A game about healthy food choices </p></td>
+            <td></td>
+          </tr>
+          <tr id="chefGame">
+            <td><p> CT Chef </p></td>
+            <td> <p> <img src="media\imgs\examples_icons\ctchef.png"> </p></td>
+            <td> <p id="chefText"> A half-baked game about Computational Thinking and business managment </p></td>
+            <td></td>
+          </tr>
+          <tr id="covidGame" onclick="location.href += '?covidgame';"">
+            <td><p> Covid Survival </p></td>
+            <td> <p> <img src="media\imgs\examples_icons\covid.png"> </p></td>
+            <td> <p id="covidText"> A game about Covid-19 Pandemic </p></td>
+            <td></td>
+          </tr>
+					<tr id="balloonGame" onclick="location.href += '?hotairballgame';"">
+						<td><p> Hot air balloon </p></td>
+						<td> <p> <img src="media\imgs\examples_icons\balloon.png"> </p></td>
+						<td> <p id="balloonText"> A game about math and chemistry </p></td>
+						<td></td>
+					</tr>
+          <tr id ="envyCityGame">
+            <td><p> Envy City </p></td>
+            <td> <p> <img src="media\imgs\examples_icons\envy.png"> </p></td>
+            <td> <p id="envyText"> Παιχνίδι για την αιεοφρεία  </p></td>
+            <td></td>
+          </tr>
+
+        <tr id="shoppingGame" >
+          <td><p> Shopping in the supermarket</p></td>
+          <td> <p> <img src="media\imgs\examples_icons\supermarket2.png"> </p></td>
+          <td> <p id="supermarketText"> A game for mathematical relations</p></td>
+          <td></td>
+        </tr>
+        <tr id ="sustTextiles">
+          <td><p> Sustainable Textiles </p></td>
+          <td> <p> <img src="media\imgs\examples_icons\sustTextiles.png"> </p></td>
+          <td> <p id="sustTextilesText"> A game for sustainability in e-textiles industry </p></td>
+          <td></td>
+        </tr>
+				<tr id ="womanity">
+					<td><p> Womanity </p></td>
+					<td> <p> <img src="media\imgs\examples_icons\default.png"> </p></td>
+					<td> <p id="womanityText"> A game for a woman's everyday life  </p></td>
+					<td></td>
+				</tr>
+				<tr  id="composte" >
+          <td><p>Composte</p></td>
+          <td> <p> <img src="media\imgs\examples_icons\default.png"> </p></td>
+          <td> <p id="composteText"> Παιχνίδι χημείας και περιβαλλοντικής εκπαίδευσης </p></td>
+          <td></td>
+        </tr>
+        <tr id = "ancientGreek">
+          <td><p> Become MP</p></td>
+          <td> <p> <img src="media\imgs\examples_icons\ancient.png"> </p></td>
+          <td> <p id="mpText"> Παιχνίδι γα τα αρχαία ελληνικά  </p></td>
+          <td></td>
+        </tr>
+        <tr id="nayplioGame"  >
+          <td><p> Πάμε Ναύπλιο </p></td>
+          <td> <p> <img src="media\imgs\examples_icons\default.png"> </p></td>
+          <td> <p id="escapeGameText"> Παιχνίδι για τον Επιχειρηματολογικό Λόγο (Toulmin Argument)  </p></td>
+          <td></td>
+        </tr>
+				<tr id ="smartJacket">
+					<td><p> Smart Jacket </p></td>
+					<td> <p> <img src="media\imgs\examples_icons\smartJacket.png"> </p></td>
+					<td> <p id=""> A game for the everyday use of a smart textile </p></td>
+					<td></td>
+				</tr>
+      <!--  <tr id="escapePlan"  >
+          <td><p> Escape Plan </p></td>
+          <td> <p> <img src="media\imgs\examples_icons\default.png"> </p></td>
+          <td> <p id="escapeGameText"> Παιχνίδι για τον Επιχειρηματολογικό Λόγο   </p></td>
+          <td></td>
+        </tr>-->
+<!--
+        <tr id="badi" onclick ="myGame.openInstance('badi', 1)">
+          <td><p > Ba-Di(Balance Diet)</p></td>
+          <td> <p> <img src="media\imgs\examples_icons\badi.png"> </p></td>
+          <td> <p id="badiText"> Παιχνίδι για την ισορροπημένη διατροφή </p></td>
+          <td></td>
+        </tr>-->
+
+        <!--<tr id="pc" onclick ="myGame.openInstance('pc', 1)">
+          <td><p>PC Architect</p></td>
+          <td> <p> <img src="media\imgs\examples_icons\pc.png"> </p></td>
+          <td> <p id="pcText"> Παιχνίδι αρχιτεκτονικής υπολογιστών </p></td>
+          <td></td>
+        </tr>-->
+
+    <!--    <tr id="ethics">
+          <td><p> The Employee </p></td>
+          <td> <p> <img src="media\imgs\examples_icons\default.png"> </p></td>
+          <td> <p id="ethicsText"> Παιχνίδι γα την επαγγελματική ηθική </p></td>
+          <td></td>
+        </tr>-->
+        <tr id="eatingOutHBGame">
+          <td><p> Eating Out *Half-baked* </p></td>
+          <td> <p> <img src="media\imgs\examples_icons\eatingOut.png"> </p></td>
+          <td> <p id="eatingTextHB"> A *half-baked* game about healthy food choices </p></td>
+          <td></td>
+        </tr>
+        <tr id="school" >
+          <td><p> School Survival</p></td>
+          <td> <p> <img src="media\imgs\examples_icons\default.png"> </p></td>
+          <td> <p id="schoolText"> A mod of the game 'Eating Out', created by students </p></td>
+          <td></td>
+        </tr>
+        <tr id="europe" >
+          <td><p> Travelling in Europe </p></td>
+          <td> <p> <img src="media\imgs\examples_icons\default.png"> </p></td>
+          <td> <p id="europeText"> A mod of the game 'Eating Out', created by students </p></td>
+          <td></td>
+        </tr>
+
+         </tbody>
+        </table>
+        </div>
+  </div>
+
+  </div>
+     <div id="designInstructions"	>
+     <div class = "popUpHeader"> <span id="instructionTitle1"> Game Instructions </span><img id="close" src="media/imgs/close.png"> </img> </div>
+   		<textarea id="instructionsEditor">  </textarea>
+   	</div>
+<!-- NEW VERSION OK -->
+
+
+
+<div id="mainArea"  class = "container-fluid h-100 main-area">
+  <div id = "scoreRow" class = "row">
+
+    <div id ="scoreDiv" class = "col-sm-11 scoreDiv">
+
+
+      <table id = "overallTable">
+      <tr id="fieldsNames">
+
+      </tr>
+      <tr id="fieldsValues">
+
+      </tr>
+      </table>
+      </div>
+    </div>
+<div id ="mainRow" class ="row ">
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link " id="tab1" data-bs-toggle="tab"  href="#gameInterface"  type="button" role="tab" aria-controls="tab1" aria-selected="true">Game Interface</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="tab2" data-bs-toggle="tab" href="#initSet" type="button" role="tab" aria-controls="tab2" aria-selected="false">Initial Settings</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id= "tab3" data-bs-toggle="tab" href="#gameRules" type="button" role="tab" aria-controls="tab3" aria-selected="false">Gameplay Rules</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="tab4" data-bs-toggle="tab" href="#endRules" type="button" role="tab" aria-controls="tab4" aria-selected="false">End Rules</a>
+    </li>
+  </ul>
+  <div class="tab-content" id="nav-tabContent">
+	<!-------TAB 1-------!-->
+  <div class="tab-pane fade" id="gameInterface" role="tabpanel" aria-labelledby="tab1" >
+		<div id="rclick" class = "rClickBox" > <span style="cursor : pointer" onclick = "deletePoint(selectedPointId)" >
+		<input type="image" src="media/imgs/delete.png" id="deletePoint" style="float: left"/> <span id = "deletePointText"> Delete point </span> <br> <br>
+		<span style="cursor : pointer" onclick = "myGame.pointSettings()" >
+		<input type="image" src="media/imgs/settings.png" id="settingsPoint" style="float: left"/ > <span id = "pointSettingsText"> Point Settings</span>
+		</div>
+    <div id="gameRow" class="row gameRow">
+    <div id ="sideCol" class = "col-sm-1">
+      <ul>
+        <li>
+        <div id="upload">
+        <input style ="cursor: pointer;" type="file" title = "Change Background Image" id="uploadImage"/>
+        </div>
+        </li>
+        <li>
+        <input id="googleMapsButton" type = "image" src="media/imgs/googlemap.png" title = "Use google maps" onclick = "myGame.useGoogleMaps()"/>
+    <input id="layersButton" type = "image" src="media/imgs/layers.png" title = "Map Layers Settings" onclick = "myGame.openLayersSettings()"/>
+        </li>
+        <li>
+          <input id="addPointIcon" type = "image" src="media/imgs/addPoint.png" title = "Add point" onclick = "addPoints(this)"/>
+        </li>
+        <li>
+          <input id="addInstructions" type = "image" src="media/imgs/instructions.png" title = "Add game instructions" onclick = "myGame.addInstructions()"/>
+        </li>
+      </ul>
+      </div>
+
+      <div id ="map" class= "col-sm-7 map"  >
+        </div>
+				<div id ="googlemap" class= "col-sm-7 map"  >
+					</div>
+
+
+				<div id= "dataBoard" class = "data_table col-sm-4 ">
+					 <div id="data_bar" class= "data_bar">
+					 <input type="image" src="media/imgs/delete.png"  onclick="myGame.deleteField()" id="deleteIco" title="Delete selected attribute"/>
+					 <input type="image" src="media/imgs/settings.png"  onclick="myGame.settingsField()" id="settingsIco" title="Settings of selected attribute"/>
+					 <input type="image" src="media/imgs/add.png" width="20px" height="20px" style="float:right" onclick="myGame.addField()" id = "addAttribute" title="Add attribute"/>
+					 </div>
+
+					 <div id = "tableContainer" >
+					 <div id= "headerContainer" >
+						<table id="datatableHeader" class="datatable">
+							<thead>
+							<tr>
+								<th>ID
+			              <br>
+			              <input type="image" id="id_sort" src="media/imgs/sort_des.png"  title="sort column"/>
+			          </th>
+
+								<th><input type="text" class="tableField" value="Description"/>
+			            <input type="image" id="d_sort" src="media/imgs/sort_des.png"  title="sort column"/>
+								</th>
+								<th>  <input type="text" class="tableField" value="Field1" onchange = "myGame.updateField(this);"/>
+			              <input type = "checkbox" id = "1_check" onclick ="myGame.selectField (this)"/>
+			              <input type="image" id="1_sort" src="media/imgs/sort_des.png"  title="sort column"/>
+			                <span>
+			              <input type="image" src="media/imgs/left.png" onclick = "moveColumnLeft(this.closest('th'))" title="move to the left" style="visibility:hidden"/>
+			            <input type="image" src="media/imgs/right.png" onclick = "moveColumnRight(this.closest('th'))"title="move to the right" />
+			          </span>
+			          </th>
+								<th> <input type="text" class="tableField" value="Field2" onchange = "myGame.updateField(this);"/>
+			            <input type = "checkbox" id = "2_check"onclick ="myGame.selectField (this)"/>
+			              <input type="image" id="2_sort"  src="media/imgs/sort_des.png"  title="sort column"/>
+			              <span>
+			            <input type="image" src="media/imgs/left.png" onclick = "moveColumnLeft(this.closest('th'))" title="move to the left"/>
+			            <input type="image" src="media/imgs/right.png" onclick = "moveColumnRight(this.closest('th'))"title="move to the right" />
+			          </span>
+			          </th>
+							</tr>
+						</thead>
+						</table>
+						</div>
+
+					<div id="bodyContainer" >
+						<table id="datatable" class="datatable">
+						<tbody>
+						</tbody>
+						</table>
+					</div>
+					</div>
+				  </div>
+
+				<div id ="gameBoard" class = "col-sm-3">
+					<div id="rightSide" class = "rightSide">
+					<!--<div id="dataDisplay" class = "dataDisplay">-->
+					<span id= "pointInfo">  <p> Point Information  </p> </span>
+					<img id="pointImage"> </img>
+					<table id = "displayTable"  class = "displayTable">
+					<thead>
+					<tr>
+					</tr>
+					</thead>
+					<tbody>
+					</tbody>
+					<tfoot>
+					  <tr>
+					  <td colspan="2">
+					    <button type="button" id="select" class="selectButton"onclick= "myGame.selectPoint()"/> Select Point </button>
+					</td>
+					 </tr>
+					</tfoot>
+					</table>
+					</div>
+					</div>
+          </div>
+		</div>
+
+		<!-------TAB 2-------!-->
+
+
+				  <div class="tab-pane fade" id="initSet" role="tabpanel" aria-labelledby="tab2">
+							<div  id="fd" class = "row editor">
+				<div class = "col-sm-11">
+				 <div id="blocklyDiv" class= "workspace" ></div>
+				</div>
+				</div>
+			</div>
+	  <div class="tab-pane fade" id="gameRules" role="tabpanel" aria-labelledby="tab3" >
+			<div id="editor2" class = "row editor">
+							<div class = "col-sm-11">
+			 <div id="blocklyDiv2"  class= "workspace"></div>
+			 </div>
+			 </div>
+		</div>
+	  <div class="tab-pane fade" id="endRules" role="tabpanel" aria-labelledby="tab4">
+			<div id="editor3" class=" row editor">
+				<div class = "col-sm-11">
+			 <div id="blocklyDiv3" class= "workspace"></div>
+			 </div>
+			</div>
+		</div>
+	</div>
+  </div>
+  </div>
+
+
+
+
+
+
+	<!------------->
+<div id="testArea" class = "container-fluid " style = "visibility: hidden;">
+
+		<div id= "mapLayersSettings" class= "mapLayersSettings">
+		    <input type="image" src = "media/imgs/close.png" onclick="myGame.hideLayersSettings()" align ="right">
+		    <br>
+		    <h4><span id="layersTitle">Layers: </span></h4>
+		  <select name ="layersList" id="layersList" class = "layersSelect" size="5" onchange ="showLayerOptions()"> </select>
+		  <span  width="180px"> <button  id="remove"  style="visibility:hidden" onclick = "removeMapLayer()"> DELETE LAYER </button>
+		  <button id="rename"  style="visibility:hidden" onclick = "openRenameDialogue()"> RENAME LAYER </button>
+		</span>
+		  <h4> <span id="newlayer">New Layer: </span></h4><input type="file" id="addLayer"  text="Add Image Layer"> </input>
+		  <br><br>
+		</div>
+		</div>
+
+
+
+
+
+<div id ="popUp"  class="popUp">
+	<div id= "popUp_text"   >
+	</div>
+<div>
+	<button type = "button" id ="popUp_button" class = "popUp_button" onclick = "myGame.closePopUp();" /> OK </button>
+</div>
+</div>
+<div id = "videoPlayerWindow" class="videopopup" align = "right">
+  <input type="image" src = "media/imgs/close.png" onclick="closeVideo()" >
+  <video id = "videoPlayer" width="420" height="315"  preload="none" controls ><source id ="videSource" type="video/x-youtube" src="" />
+</video>
+</div>
+<div id = "fS" class="fieldSettings" >
+
+<div id="bar" class = "bar"> <input type="image" src="media/imgs/close.png"  onclick="myGame.closeSettings()" title="close" style="float: right"/>
+ </div>
+ <span> <span id="typeLabel">Attribute type: </span><select onchange ="myGame.changeType(this.value)" id="selectBox">
+  <option value="text" onclick="hideFormulaOptions ();">text</option>
+  <option value="number" onclick="hideFormulaOptions ();">number</option>
+<option value="formula" onclick="showFormulaOptions ();">formula</option>
+<option value="travelTime" onclick="showFormulaOptions ();">travel time</option>
+  <option value="url" onclick="hideFormulaOptions ();">url</option>
+  <option value="date" onclick="hideFormulaOptions ();">date</option>
+  <option value="file" onclick="hideFormulaOptions ();">image</option>
+</select>  </span>
+
+ <span> <br> </br><span id="visibilityLabel" >Visibilty to player: </span> <select onchange ="myGame.changeVisibility(this.value)" id="visibilityBox">
+  <option value="visible">visible</option>
+  <option value="hidden">hidden</option>
+</select></span>
+</div>
+<div id="pointSettings" class = "mapLayersSettings" style="visibility : hidden; margin-top:10%;"> <span id="pointSettingsTitle">
+Settings of Point: </span> <span id="pointName"> </span> <br><br>
+
+<!--Belongs in group: <select id = "pointGroupList" onchange ="" id="visibilityBox">
+ <option value="none" selected >none</option>
+ <option value="new" onselect= "" ></option>
+</select>-->
+<!--icon: <img id="iconThumb" src="media/imgs/marker.png" width="30px" height="30px"> </img>
+	<input style ="cursor: pointer;" type="file" title = "Change Icon" id="uploadIcon" />-->
+<br>
+<span id = "appearOnLayer" >Appears on Layer: </span><select  id="pointLayerList" class="layersSelect" size = "3">
+
+</select>
+<br> <span id = "affectScore">
+Selecting this point will NOT affect the score and it will not be counted to the visited points: </span><input type="checkbox" id="dummy"> </input><br><br>
+<button onclick ="myGame.savePointSettings ()"> OK </button>
+</div>
+
+
+<!--- MODALS -->
+
+	<div id="gameInstructions" class="modal" tabindex="-1">
+ <div class="modal-dialog modal-dialog-scrollable modal-lg">
+		<div class="modal-content">
+		  <div class="modal-header green">
+				 <h5 class="modal-title w-100" id="instructions2">Game Instruction</h5>
+				 <button type="button" class="btn-close" onclick="myGame.togglePlayInstructions();" aria-label="Close"></button>
+		  </div>
+		  <div class="modal-body" id="instructions">
+		  </div>
+		  <div class="modal-footer green">
+		    <h5 class = "w-100">	<button onclick="myGame.togglePlayInstructions();" id="letsPlayBtn" class="modal_button"> Let's Play! </button></h5>
+		  </div>
+		</div>
+		</div>
+		</div>
+<!-- loading modal -->
+<div id="loadingModal" class="modal" tabindex="-1">
+<div class="modal-dialog modal-dialog-scrollable modal-lg">
+	<div class="modal-content">
+		<div class="modal-header green">
+		</div>
+		<div class="modal-body">
+			<span id ="loadingMessage"> The game is loading...Please wait </span>
+		</div>
+		<div class="modal-footer green">
+		</div>
+	</div>
+	</div>
+	</div>
+
+<!-- Game progress modal-->
+<div id="myModal" class="modal" tabindex="-1">
+	<div class="modal-dialog modal-dialog-scrollable modal-lg">
+<div class="modal-content">
+	<div class="modal-header green">
+		 <h5 class="modal-title w-100"> <span id = "gameProgressText"> Game Statistics </span> </h5>
+		  <button type="button" id="closeStats" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	</div>
+	<div class="modal-body">
+		<p><span> <b> <span id = "currentValuesText"> Current Game Values </span> </b> </span></p>
+		<div id ="current-score" class ="modal-score"> </div>
+			<hr>
+		<p> <span><b> <span id = "choiceHistoryText">  Choices History</b>  </span></p>
+		<div id="messageArea" class ="modal-textarea"> </div>
+	</div>
+	<div class="modal-footer green">
+		<h5 class = "w-100">	<button id="downloadScore" class="modal_button"><i class="fa fa-download"></i> <span id ="downloadScoreText"> Download Score <span></button>
+			<button id="backModalbtn" class="modal_button"><i class="fa fa-left"></i> <span id ="backBtnText">Back <span> </button>
+			</h5>
+	</div>
+</div>
+</div>
+</div>
+
+<!-- game ends modal -->
+<div id="gameEnds" class="modal">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+	<div class="modal-header orange">
+		<h5 class="modal-title w-100"> <span id = "gameEnded"> The game has ended! </span> </h5>
+
+	</div>
+	<div class="modal-body" id="endGameMessage">
+		<p>It seems that the game has ended </p>
+	</div>
+	<div class="modal-footer orange">
+		<h5 class="w-100">	<p> <b> <span id = "gameEndedQuestion"> What would you like to do? </span> </b></p>
+			<button  class="modal_button buttonOrange"  onclick="myGame.playAgain();"><i class="fa fa-refresh"></i> <span id="playAgainText"> Play Again </span></button>
+			<button  class="modal_button buttonOrange" onclick="myGame.backToEdit();"><i class="fa fa-wrench"></i> <span id = "editGameText">  Edit Game </span></button>
+			<button id="show_score" class="modal_button buttonOrange"><i class="fa fa-bar-chart"></i> Show score and statistics</button>
+		</h5>
+	</div>
+</div>
+</div>
+</div>
+
+<!--<p class="footer" id="footerText">
+    ChoiCo Copyright (C) 2017-2023. 
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or any later version.
+    See the <a href = "https://www.gnu.org/licenses/gpl.html" target="blank"> GNU General Public License </a> for more details.
+
+</p>-->
+
+</body>
+<!-- console modal-->
+<div id="consoleModal" class="modal" tabindex="-1" >
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+	<div class="modal-header ">
+		<h5 class="modal-title w-100">Error/Warning Messages</h5>
+		 <button type="button" class="btn-close"  aria-label="Close"></button>
+	</div>
+	<div class="modal-body" id="errormessages">
+		<p>There are no errors :) </p>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-secondary" id="closeConsoleModal">Close</button>
+	</div>
+</div>
+</div>
+</div>
+
+<script src="core/playMode.js?v=3.2"></script>
+<script src="core/map.js?v=2.1"></script>
+	<script src="core/designMode.js?v=2.1"></script>
+	<script src="core/datatable.js?v=3.1"></script>
+<script src="core/blocks.js?v=2.0"></script>
+<script src="core/createXmls.js?v=2.0"></script>
+<script type="text/javascript" src="core/languageToggle.js?v=4.4"></script>
+<script src="core/API.js"></script>
+<script src="../../js/wiil.js"></script>
+<script src="core/initialize.js?v=2.2"></script>
+<script src="core/handleFiles.js?v=2.2"></script>
+<script src="core/tabs.js?v=2.0"></script>
+  	<script type="text/javascript" src="core/googlemaps.js?v=1.0"></script>
+<script type="text/javascript" src="core/version.js?v=3.2"></script>
+
+<script> launchData = null;</script>
+</html>

@@ -1,0 +1,74 @@
+
+<xml id="toolbox1" style="display: none" >
+<category name = "Initialize" colour="#a55ba5">
+<block type ="initialvalues"> </block>
+ <block type="initialValue"> <value name="varVal">
+<block id="var2" type="math_number">
+<field name="NUM">0</field>
+</block>
+</value></block>
+
+</category>
+<category name="Game Actions" colour="#5ba593">
+<block type="text"></block>
+  <block type="text_print"></block>
+
+
+<block type="text_print" id="DPWMna3+q{*XS!?WQNcM" x="-13" y="88">
+  <value name="TEXT">
+    <shadow type="text" id="oCHj.d.H/qtW44UR5@lU">
+      <field name="TEXT">abc</field>
+    </shadow>
+    <block type="text_join" id="Nz8/|JeJM{u_57Ci8toy">
+      <mutation items="2"></mutation>
+    </block>
+  </value>
+</block>
+ <block type="popup"></block>
+<block type="sound"></block>
+<block type="video"></block>
+</category >
+<category name="Map Actions" colour="#A6745C">
+   <block type="background"></block>
+  <block type="set_temporary_background">
+     <value name = "time">
+      <block type="math_number">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+  </block>
+  <block type="show_point"></block>
+ <block type="hide_point"></block>
+ <block type="hide_all"></block>
+ <block type="show_all"></block>
+</category>
+<!--<category name="Actions" colour="#5ba593">
+<block type="text"></block>
+  <block type="text_print"></block>
+
+
+<block type="text_print" id="DPWMna3+q{*XS!?WQNcM" x="-13" y="88">
+  <value name="TEXT">
+    <shadow type="text" id="oCHj.d.H/qtW44UR5@lU">
+      <field name="TEXT">abc</field>
+    </shadow>
+    <block type="text_join" id="Nz8/|JeJM{u_57Ci8toy">
+      <mutation items="2"></mutation>
+    </block>
+  </value>
+</block>
+ <block type="popup"></block>
+<block type="sound"></block>
+<block type="video"></block>
+<block type="background"></block>
+<block type="set_temporary_background">
+   <value name = "time">
+    <block type="math_number">
+      <field name="NUM">1</field>
+    </block>
+  </value>
+</block>
+<block type="hide_point"></block>
+<block type="show_point"></block>
+</category > -->
+  </xml>

@@ -1,0 +1,92 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="procedures_defnoreturn" id="=%Ulo7i~n)6o7-6-m63*" x="63" y="13">
+    <field name="NAME">συνθήκη1</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="controls_if" id="zoCwj~V,9?|p`xqbU)^0">
+        <value name="IF0">
+          <block type="logic_compare" id="=6Ci#CvSVIlGRznVYlZZ">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="^3ODhCr3:37@gMr`_VM_">
+                <field name="VAR">ΠεδίοΑ</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="5Euj72YHr[|Dq#bShMqN">
+                <field name="NUM">10</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="text_print" id="o10wEy?aH)w4zJID^0bp">
+            <value name="TEXT">
+              <shadow type="text" id="Van;N#zIv=(:1Mz]nRg2">
+                <field name="TEXT">abc</field>
+              </shadow>
+              <block type="text" id="Z=VUkcnKfs%L5Wq%|{OO">
+                <field name="TEXT">Προσοχή!</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="n#/br,JsaC~!_)NxEzBg" x="63" y="163">
+    <field name="NAME">συνθήκη2</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="controls_if" id="wJsr4E}/k#ypKxjn]8Og">
+        <value name="IF0">
+          <block type="logic_operation" id="~HWf.gD/Wk|X3wk2XLEp">
+            <field name="OP">AND</field>
+            <value name="A">
+              <block type="logic_compare" id="O[Xk1(V4i;`J)Yf*0*{G">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="RZ~NBEy_U[[YkI]Gf)5%">
+                    <field name="VAR">ΠεδίοΒ</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="=3;]*LLTgJ)ww*NZGMPs">
+                    <field name="NUM">10</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block type="logic_compare" id="99zn3Fnbn0U-A-[I0ja(">
+                <field name="OP">LT</field>
+                <value name="A">
+                  <block type="variables_get" id="!uw]aXt#ct:?_6,Ge9gP">
+                    <field name="VAR">ΠεδίοΑ</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="8tm(fT:},J{Kd,ax.3Zn">
+                    <field name="NUM">10</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="text_print" id="D~R1f@oI|W82{z)?X}jk">
+            <value name="TEXT">
+              <shadow type="text" id="Van;N#zIv=(:1Mz]nRg2">
+                <field name="TEXT">abc</field>
+              </shadow>
+              <block type="text" id="jYm+N8mU)mf_XII-n9ig">
+                <field name="TEXT">Κατι</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</xml>
